@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>123tool | Awesome Repository</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="hacker-banner">
+            <canvas id="matrix-canvas"></canvas>
+            <div class="header-content">
+                <h1>[123tool] Awesome Repositories 💻</h1>
+                <p>A curated list of essential awesome repositories, focused on coding, security, and learning.</p>
+                <button id="theme-toggle">☀️ Switch to Light Mode</button>
+            </div>
+        </div>
+        
+        <div class="search-container">
+            <input type="text" id="repoSearch" onkeyup="searchTable()" placeholder="🔍 Search repositories by name or description...">
+        </div>
+    </header>
+
+    <main>
+        <section id="repo-list">
+            <h2>📚 List Repo</h2>
+            
+            <div class="table-container">
+                <table id="awesomeTable">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable(0)">Repository</th>
+                            <th onclick="sortTable(1)">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><a href="https://github.com/sindresorhus/awesome" target="_blank">sindresorhus/awesome</a></td><td>😎 Awesome lists about all kinds of interesting topics. The original awesome list.</td></tr>
+                        <tr><td><a href="https://github.com/vinta/awesome-python" target="_blank">vinta/awesome-python</a></td><td>An opinionated list of awesome Python frameworks, libraries, software, and resources.</td></tr>
+                        <tr><td><a href="https://github.com/awesome-selfhosted/awesome-selfhosted" target="_blank">awesome-selfhosted/awesome-selfhosted</a></td><td>A list of Free Software network services and web applications which can be hosted on your own servers.</td></tr>
+                        <tr><td><a href="https://github.com/avelino/awesome-go" target="_blank">avelino/awesome-go</a></td><td>A curated list of awesome Go frameworks, libraries, and software.</td></tr>
+                        <tr><td><a href="https://github.com/f/awesome-chatgpt-prompts" target="_blank">f/awesome-chatgpt-prompts</a></td><td>This repo includes ChatGPT prompt curation to use ChatGPT and other LLM tools better.</td></tr>
+                        <tr><td><a href="https://github.com/Hack-with-Github/Awesome-Hacking" target="_blank">Hack-with-Github/Awesome-Hacking</a></td><td>A collection of various awesome lists for hackers, pentesters, and security researchers.</td></tr>
+                        <tr><td><a href="https://github.com/jaywcjlove/awesome-mac" target="_blank">jaywcjlove/awesome-mac</a></td><td> A curated list of awesome applications, software, tools and shiny things for macOS.</td></tr>
+                        <tr><td><a href="https://github.com/EbookFoundation/free-programming-books" target="_blank">EbookFoundation/free-programming-books</a></td><td>📚 Freely available programming books.</td></tr>
+                        <tr><td><a href="https://github.com/public-apis/public-apis" target="_blank">public-apis/public-apis</a></td><td>A collective list of free APIs for use in software and web development.</td></tr>
+                        <tr><td><a href="https://github.com/donnemartin/system-design-primer" target="_blank">donnemartin/system-design-primer</a></td><td>Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards.</td></tr>
+                        <tr><td><a href="https://github.com/jwasham/coding-interview-university" target="_blank">jwasham/coding-interview-university</a></td><td>A complete computer science study plan to become a software engineer.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-javascript-cn" target="_blank">jobbole/awesome-javascript-cn</a></td><td>Awesome JavaScript resources in Chinese, including package managers, loaders, testing frameworks, MV* frameworks, Node.js, HTML5, etc.</td></tr>
+                        <tr><td><a href="https://github.com/getify/You-Dont-Know-JS" target="_blank">getify/You-Dont-Know-JS</a></td><td>A book series on JavaScript. @YDKJS on Twitter.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-nodejs-cn" target="_blank">jobbole/awesome-nodejs-cn</a></td><td>Awesome Node.js resources in Chinese, including command-line tools, Web frameworks, template engines, data validation, asynchronous flow control, HTTP clients, databases, URLs, and file uploads.</td></tr>
+                        <tr><td><a href="https://github.com/s-yadav/react-horizontal-timeline" target="_blank">s-yadav/react-horizontal-timeline</a></td><td>A simple and responsive React horizontal timeline component.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-ios-cn" target="_blank">jobbole/awesome-ios-cn</a></td><td>Awesome iOS resources in Chinese, including frameworks, class libraries, testing, App Store, tools, and Xcode.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-android-cn" target="_blank">jobbole/awesome-android-cn</a></td><td>Awesome Android resources in Chinese, including frameworks, libraries, tools, and Material Design.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-cpp-cn" target="_blank">jobbole/awesome-cpp-cn</a></td><td>Awesome C++ resources in Chinese, including the standard library, Web application frameworks, artificial intelligence, databases, image processing, logging, testing, concurrency, encryption, and serialization.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-machine-learning-cn" target="_blank">jobbole/awesome-machine-learning-cn</a></td><td>Awesome Machine Learning resources in Chinese, including general use, Python, Ruby, Lisp, Java, C++, Go, and .NET.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-php-cn" target="_blank">jobbole/awesome-php-cn</a></td><td>Awesome PHP resources in Chinese, including dependency management, frameworks, routing, templates, testing, HTTP, command line, security, code analysis, documentation, databases, image processing, events, and geolocation.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-java-cn" target="_blank">jobbole/awesome-java-cn</a></td><td>Awesome Java resources in Chinese, including build tools, Web frameworks, Web sockets, databases, template engines, testing, logging, security, and code analysis.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-deep-learning-cn" target="_blank">jobbole/awesome-deep-learning-cn</a></td><td>Awesome Deep Learning resources in Chinese, including Caffe, TensorFlow, Torch, MXNet, and Theano.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-ruby-cn" target="_blank">jobbole/awesome-ruby-cn</a></td><td>Awesome Ruby resources in Chinese, including command-line tools, Web frameworks, template engines, API building, ORM, testing, Web Socket, security, code analysis, and task scheduling.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-css-cn" target="_blank">jobbole/awesome-css-cn</a></td><td>Awesome CSS resources in Chinese, including preprocessors, frameworks, CSS structure, code style, naming conventions, tools, writing, and community.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-kotlin-cn" target="_blank">jobbole/awesome-kotlin-cn</a></td><td>Awesome Kotlin resources in Chinese, including libraries, frameworks, software, and resources.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-c-cn" target="_blank">jobbole/awesome-c-cn</a></td><td>Awesome C resources in Chinese, including databases, encryption, concurrency, networking, Web, command line, testing, virtual machines, embedded systems, and build systems.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-dotnet-cn" target="_blank">jobbole/awesome-dotnet-cn</a></td><td>Awesome .NET resources in Chinese, including Web frameworks, ORM, IoC, security, logging, testing, code analysis, GUI, and protocols.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-r-cn" target="_blank">jobbole/awesome-r-cn</a></td><td>Awesome R resources in Chinese, including visualization, databases, parallel processing, Web application frameworks, testing, file format handling, and command line.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-golang-cn" target="_blank">jobbole/awesome-golang-cn</a></td><td>Awesome Go resources in Chinese, including frameworks, databases, logging, testing, concurrency, template engines, security, Web, middleware, and command line.</td></tr>
+                        <tr><td><a href="https://github.com/josepholiveira/awesome-zsh-plugins" target="_blank">josepholiveira/awesome-zsh-plugins</a></td><td>A collection of awesome ZSH frameworks, plugins, themes, and custom configurations.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-scala-cn" target="_blank">jobbole/awesome-scala-cn</a></td><td>Awesome Scala resources in Chinese, including build tools, frameworks, testing, functional programming, data, command line, networking, concurrency, databases, and encryption.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-security-cn" target="_blank">jobbole/awesome-security-cn</a></td><td>Awesome Security resources in Chinese, including threat analysis, exploitation, penetration testing, cryptography, forensics, security tools, security conferences, and network security.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-shell-cn" target="_blank">jobbole/awesome-shell-cn</a></td><td>Awesome Shell resources in Chinese, including command line frameworks, command line tools, Git, testing, Shell scripting, and Linux resources.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-git-cn" target="_blank">jobbole/awesome-git-cn</a></td><td>Awesome Git resources in Chinese, including tools, GUI clients, tutorials, books, blogs, Git Hooks, and configuration.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-linux-cn" target="_blank">jobbole/awesome-linux-cn</a></td><td>Awesome Linux resources in Chinese, including applications/tools, command line, desktop environments, window managers, security, and distributions.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-docker-cn" target="_blank">jobbole/awesome-docker-cn</a></td><td>Awesome Docker resources in Chinese, including tools, networking, images, books, tutorials, and articles.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-bigdata-cn" target="_blank">jobbole/awesome-bigdata-cn</a></td><td>Awesome Big Data resources in Chinese, including data visualization, databases, search engines, middleware, stream processing, machine learning, and applications.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-design-cn" target="_blank">jobbole/awesome-design-cn</a></td><td>Awesome Design resources in Chinese, including books, tools, fonts, color schemes, design principles, design blogs, and design communities.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-javascript-cn/tree/master/docs/react" target="_blank">jobbole/awesome-javascript-cn/tree/master/docs/react</a></td><td>Awesome React resources in Chinese, including Flux, Redux, Mobx, routing, components, forms, testing, tools, and tutorials.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-javascript-cn/tree/master/docs/angular" target="_blank">jobbole/awesome-javascript-cn/tree/master/docs/angular</a></td><td>Awesome Angular resources in Chinese, including frameworks, components, directives, routing, testing, tools, books, and tutorials.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-javascript-cn/tree/master/docs/vue" target="_blank">jobbole/awesome-javascript-cn/tree/master/docs/vue</a></td><td>Awesome Vue.js resources in Chinese, including frameworks, components, routing, testing, tools, books, and tutorials.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-javascript-cn/tree/master/docs/typescript" target="_blank">jobbole/awesome-javascript-cn/tree/master/docs/typescript</a></td><td>Awesome TypeScript resources in Chinese, including frameworks, tools, tutorials, and books.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-javascript-cn/tree/master/docs/electron" target="_blank">jobbole/awesome-javascript-cn/tree/master/docs/electron</a></td><td>Awesome Electron resources in Chinese, including components, tools, books, and tutorials.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-software-architecture-cn" target="_blank">jobbole/awesome-software-architecture-cn</a></td><td>Awesome Software Architecture resources in Chinese, including architectural styles, design patterns, DDD, clean architecture, microservices, and DevOps.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-web-dev-books-cn" target="_blank">jobbole/awesome-web-dev-books-cn</a></td><td>A curated list of recommended front-end technical books for web development.</td></tr>
+                        <tr><td><a href="https://github.com/CyberSecurityUP/Awesome-Red-Team-Operations" target="_blank">CyberSecurityUP/Awesome-Red-Team-Operations</a></td><td>A curated list of resources for Red Team Operations, including tools, methodologies, and training materials.</td></tr>
+                        <tr><td><a href="https://github.com/anubhavsrivastava/awesome-ui-component-library" target="_blank">anubhavsrivastava/awesome-ui-component-library</a></td><td>Curated list of framework component libraries for UI styles/toolkit.</td></tr>
+                        <tr><td><a href="https://github.com/jobbole/awesome-sysadmin-cn" target="_blank">jobbole/awesome-sysadmin-cn</a></td><td>Awesome SysAdmin resources in Chinese, including backup/cloning software, cloud computing/storage, collaboration software, configuration management, log management, monitoring, and project management.</td></tr>
+                        <tr><td><a href="https://github.com/hugo53/awesome-RemoteWork" target="_blank">hugo53/awesome-RemoteWork</a></td><td>Resources for remote workers: approaches, hiring page, remote life and more.</td></tr>
+                        <tr><td><a href="https://github.com/uhub/awesome-matlab" target="_blank">uhub/awesome-matlab</a></td><td>A curated list of awesome MATLAB frameworks, libraries, and software.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="readmore-note">
+                <p>⚠️ **Note:** This list is manually compiled. For the **complete, full list** of all repositories mentioned in the README, please visit the source file:</p>
+                <p><a href="https://github.com/123tool/List-Repo/blob/refs/heads/main/docs/List-Repo.md" target="_blank" class="full-list-link">➡️ View Full List in README.md on GitHub</a></p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 | Powered by <a href="https://github.com/123tool" target="_blank">123tool</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
